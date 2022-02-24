@@ -17,7 +17,7 @@ class NearestNeighborsRecommender(Recommender):
         - 'pearson'.
     """
 
-    def __init__(self):
+    def __init__(self, **params):
         super().__init__()
         self.recommender_df = pd.DataFrame(columns=['user_id', 'item_id', 'score'])
         self.interactions_df = None
@@ -34,7 +34,6 @@ class NearestNeighborsRecommender(Recommender):
         self.n_neighbors = 10
         self.should_recommend_already_bought = False
 
-    def initialize(self, **params):
         if 'n_neighbors' in params:
             self.n_neighbors = params['n_neighbors']
         if 'should_recommend_already_bought' in params:
@@ -199,8 +198,8 @@ class NearestNeighborsRecommender(Recommender):
 
 class UserBasedCosineNearestNeighborsRecommender(NearestNeighborsRecommender):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, **params):
+        super().__init__(**params)
 
         self.collaboration_type = 'user'
         self.similarity_measure = 'cosine'
@@ -208,8 +207,8 @@ class UserBasedCosineNearestNeighborsRecommender(NearestNeighborsRecommender):
 
 class UserBasedPearsonNearestNeighborsRecommender(NearestNeighborsRecommender):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, **params):
+        super().__init__(**params)
 
         self.collaboration_type = 'user'
         self.similarity_measure = 'pearson'
@@ -217,8 +216,8 @@ class UserBasedPearsonNearestNeighborsRecommender(NearestNeighborsRecommender):
 
 class ItemBasedCosineNearestNeighborsRecommender(NearestNeighborsRecommender):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, **params):
+        super().__init__(**params)
 
         self.collaboration_type = 'item'
         self.similarity_measure = 'cosine'
@@ -226,8 +225,8 @@ class ItemBasedCosineNearestNeighborsRecommender(NearestNeighborsRecommender):
 
 class ItemBasedPearsonNearestNeighborsRecommender(NearestNeighborsRecommender):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, **params):
+        super().__init__(**params)
 
         self.collaboration_type = 'item'
         self.similarity_measure = 'pearson'

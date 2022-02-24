@@ -1,6 +1,6 @@
 # Recommender Systems class
 
-Department of Mathematics and Computer Science, Adam Mickiewicz University, 2021
+Department of Mathematics and Computer Science, Adam Mickiewicz University, 2022
 
 Author: Piotr Zioło
 
@@ -50,7 +50,7 @@ Author: Piotr Zioło
 	A new tab with Jupyter Notebook should open in your browser.
 
 
-9. In Jupyter Notebook open jupyter_test.ipynb.
+9. In Jupyter Notebook open class_1a_jupyter_test.ipynb.
 
 
 10. Click on the first cell and hit shift+enter. The first cell should get executed properly. Do the same for all other cells (you can continuously hit shift+enter until you execute all cells).
